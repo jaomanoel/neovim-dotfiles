@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # neovim-dotfiles
 ## Custom Keys
 
@@ -31,5 +30,3 @@
 |-----------|-------------------------|
 | F7        | Open floating terminal  |
 | F7        | Close floating terminal |
-=======
->>>>>>> a33fa75 (first commit)
