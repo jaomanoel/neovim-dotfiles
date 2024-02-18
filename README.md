@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # neovim-dotfiles
 ## Custom Keys
 
@@ -30,3 +31,9 @@
 |-----------|-------------------------|
 | F7        | Open floating terminal  |
 | F7        | Close floating terminal |
+=======
+# 💤 LazyVim
+
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+>>>>>>> a33fa75 (first commit)
