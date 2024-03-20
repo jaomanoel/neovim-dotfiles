@@ -5,11 +5,12 @@ local opts = { noremap = true, silent = true }
 
 -- Save and Quit
 keymap.set({ "n", "i", "x" }, "<C-q>", "<cmd>qa<cr>")
-keymap.set({ "n", "i", "x" }, "<S-s>", "<cmd>w<cr>")
+keymap.set({ "n", "x" }, "<S-s>", "<cmd>w<cr>")
 
 -- Create line cursor
 keymap.set("n", "ou", ":normal! O<CR>:normal! j<CR>", opts)
 keymap.set("n", "od", ":normal! o<CR>:normal! k<CR>", opts)
+keymap.set("n", "o<leader>", ":normal! o<CR>i", opts)
 
 -- Move to window using the <ctrl> wasd keys
 keymap.set("n", "<C-a>", "<C-w>h", opts)

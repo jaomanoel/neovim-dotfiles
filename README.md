@@ -1,6 +1,14 @@
 # neovim-dotfiles
 ## Custom Keys
 
+### Create Lines
+
+| Command    | Description                                             |
+|------------|---------------------------------------------------------|
+| o - Leader | Create a line below and charge mode to edit             |
+| o - u      | Create a line on top and move the cursor to the origin  |
+| o - d      | Create a line below and move the cursor to the origin   |
+
 ### Move Lines
 
 | Command | Description   |
