@@ -12,6 +12,6 @@ local opt = vim.opt
 
 opt.showmode = true -- Dont show mode since we have a statusline
 opt.spelllang = { "en", "pt_BR" }
-opt.wrap = true
+opt.wrap = false
 opt.scrolloff = 8
-opt.updatetime = 500
+opt.updatetime = 2000
