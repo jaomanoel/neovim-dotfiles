@@ -92,9 +92,14 @@ local config = {
       configuration = {
         runtimes = {
           {
-            name = "JavaSE-17",
-            path = "/home/eronads/.sdkman/candidates/java/17.0.7-tem/",
+            name = "java-17-openjdk",
+            path = "/usr/lib/jvm/java-17-openjdk",
             default = true,
+          },
+          {
+            name = "jre-17",
+            path = "/usr/lib/jvm/jre-17",
+            default = false,
           },
         },
       },
@@ -111,6 +116,19 @@ local config = {
   init_options = {
     bundles = {},
   },
+  on_attach = function(client, bufnr)
+    -- Desabilita validação contínua
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+
+    -- Desabilita a verificação automática
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+
+    -- Configura validação ao salvar
+    vim.cmd([[autocmd BufWritePre *.java lua vim.lsp.buf.format({ timeout_ms = 1000 })]])
+    vim.cmd([[autocmd BufWritePre *.java lua vim.lsp.buf.code_action()]])
+    vim.cmd([[autocmd BufWritePre *.java lua vim.lsp.buf.execute_command({ command = "java.action.organizeImports" })]])
+  end,
 }
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.
